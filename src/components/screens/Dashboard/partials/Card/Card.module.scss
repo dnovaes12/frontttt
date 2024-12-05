@@ -1,0 +1,77 @@
+@import "../../../../../styles/colors.scss";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.2rem;
+  flex: 1;
+
+  padding: 1.2rem;
+  border-radius: 20px;
+  color: $white-color;
+  background: $gray-color-400;
+
+  transition: filter 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(0.8);
+  }
+
+  header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.1rem;
+
+    h4 {
+      font-weight: 400;
+      font-size: 1.1rem;
+    }
+
+    .icon {
+      height: 1.2rem;
+    }
+  }
+
+  span {
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+
+  &.amountCard,
+  &.inCard {
+    color: $green-color-500;
+  }
+
+  &.valueCanceledCard,
+  &.outCard {
+    color: $red-color-500;
+  }
+
+  &.valueCard,
+  &.totalCard {
+    color: $blue-color-700;
+  }
+}
+@media (max-width: 980px) {
+  .card {
+    padding: 1rem;
+    gap: 0.8rem;
+
+    header {
+      h4 {
+        font-size: 1rem;
+      }
+
+      .icon {
+        height: 1.1rem;
+      }
+    }
+
+    span {
+      font-size: 1.2rem;
+    }
+  }
+}

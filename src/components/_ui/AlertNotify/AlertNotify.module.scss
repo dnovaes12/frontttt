@@ -1,0 +1,62 @@
+@import "../../../styles/colors.scss";
+
+.alertContainer {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  z-index: 99999999;
+  transform: translateX(-50%);
+
+  border-radius: 20px;
+  padding: 1rem 1.5rem;
+
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+  max-width: 90%;
+
+  color: white;
+  box-shadow: 1px 4px 10px rgba(0 0 0 / 0.5);
+  line-height: 0;
+
+  animation: slideUp 0.2s;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  button {
+    line-height: 0;
+    border: none;
+    background: transparent;
+
+    color: white;
+    cursor: pointer;
+    transition: filter 0.2s;
+
+    &:hover {
+      filter: brightness(0.8);
+    }
+  }
+}
+
+.success {
+  background: $green-color-500;
+}
+
+.error {
+  background: $red-color-500;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translate(-50%, 20%);
+    opacity: 0.3;
+  }
+  to {
+    transform: translate(-50%, 0%);
+
+    opacity: 1;
+  }
+}

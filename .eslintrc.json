@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "@rocketseat/eslint-config/react",
+    "next/core-web-vitals"  // Adicione isso
+  ],
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "off"
+  }
+}

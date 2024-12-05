@@ -1,0 +1,91 @@
+@import "../../../styles/colors.scss";
+
+.headerPage {
+  margin-bottom: 1.5rem;
+}
+
+.cardsAndProductsContainer {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.2rem;
+
+  margin: 1.2rem 0;
+
+  .cardsContainer {
+    display: grid;
+    gap: 1.2rem;
+    grid-template-columns: 1fr 1fr;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+  }
+
+  .pizzaGraph {
+    border: 1px solid $gray-color-300;
+
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    header {
+      padding: 1rem 1.2rem;
+
+      h4 {
+        font-size: 1.1rem;
+        line-height: 1.5;
+        font-weight: 600;
+        color: $gray-color-200;
+      }
+    }
+
+    main {
+      height: 100%;
+      border-top: 1px solid $gray-color-350;
+    }
+  }
+}
+
+.graphPayments {
+  border: 1px solid $gray-color-300;
+
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  header {
+    padding: 1rem 1.2rem;
+
+    h4 {
+      font-size: 1.1rem;
+      line-height: 1.5;
+      font-weight: 600;
+      color: $gray-color-200;
+    }
+  }
+
+  main {
+    height: 100%;
+    border-top: 1px solid $gray-color-350;
+  }
+}
+
+@media (max-width: 980px) {
+  .cardsAndProductsContainer {
+    display: flex;
+    flex-direction: column;
+
+    .cardsContainer {
+      gap: 0.8rem;
+
+      ul {
+        gap: 0.8rem;
+      }
+    }
+  }
+}
